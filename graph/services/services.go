@@ -9,6 +9,7 @@ import (
 
 type UserService interface {
 	GetUserByName(ctx context.Context, name string) (*model.User, error)
+	GetIssueByRepoAndNumber(ctx context.Context, id string, number int) (*model.Issue, error)
 }
 
 type Services interface {
